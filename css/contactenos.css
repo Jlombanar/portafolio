@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;          
+    flex-direction: column;    
+    min-height: 100vh;         
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+* {
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-header {
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.container-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.container-header header .logo a {
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    color: #1cb698;
+    text-decoration: none;
+}
+
+.container-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.container-header header nav ul li a {
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.container-header header nav ul li a:hover {
+    color: #1cb698;
+}
+
+section {
+    margin-top: 80px; 
+}
+#contacto {
+    flex: 1;   
+}
+
+.contacto {
+  padding: 60px 20px;
+ 
+  color: #fff;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00b894;
+}
+
+.contacto p {
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Contenedor de formulario + mapa */
+.contacto-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Formulario */
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contacto textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contacto button {
+  background: #00b894;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contacto button:hover {
+  background: #009874;
+}
+
+/* Mapa */
+.mapa {
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 350px;
+  box-shadow: 0 10px 15px rgba(229, 215, 215, 0.4);
+ 
+}
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  
+}
+
+footer {
+  background-color: rgb(232, 72, 72);
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer .redes {
+  margin-bottom: 20px;
+}
+
+footer .redes a {
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+footer .redes a:hover {
+  background: #1cb698;
+  border-color: #1cb698;
+  transform: scale(1.1);
+}
+/* Responsivo */
+@media (max-width: 900px) {
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+  }
+  
+  .mapa {
+    height: 300px;
+  }
+}
+

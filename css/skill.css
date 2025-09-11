@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+* {
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-header {
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.container-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.container-header header .logo a {
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    color: #1cb698;
+    text-decoration: none;
+}
+
+.container-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.container-header header nav ul li a {
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.container-header header nav ul li a:hover {
+    color: #1cb698;
+}
+
+section {
+    margin-top: 120px; 
+}
+.skills {
+  color: #fff;
+  padding: 50px 20px;
+ 
+}
+
+.skills .container-section {
+  max-width: 1199px;
+  margin: auto;
+}
+
+.skills h2 {
+  font-size: 48px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.skills .fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.skills .fila .col {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 20px;
+}
+
+.skills .fila .col h3 {
+  font-size: 28px;
+  font-family: 'Righteous', cursive;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.skills .skills span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skills .barra-skills {
+    height: 8px;
+    width: 80%;
+    background-color: #f0f3f7;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skills .progreso {
+    background-color: #1cb698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skills .barra-skills span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1cb698;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+.skills .barra-skills .progreso.javaScript  {
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+  0% { width: 0%; }
+  100% { width: 75%; }
+}
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+footer .redes {
+  margin-bottom: 20px;
+}
+
+footer .redes a {
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+footer .redes a:hover {
+  background: #1cb698;
+  border-color: #1cb698;
+  transform: scale(1.1);
+}
+
+/* Tablets y móviles (pantallas menores a 768px) */
+@media screen and (max-width: 768px) {
+  .container-header header {
+    flex-direction:  column;
+    align-items: center;
+  }
+
+  .container-header header ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .container-header header nav ul li {
+    margin: 10px 0;
+  }
+
+  .skills {
+    padding: 40px 15px;
+  }
+
+  .skills h2 {
+    font-size: 36px;
+  }
+
+  .skills .fila {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skills .fila .col {
+    padding: 0;
+    min-width: 100%;
+  }
+
+  .skills .fila .col h3 {
+    font-size: 24px;
+  }
+
+  .skills .skills .barra-skills {
+    width: 100%;
+  }
+
+  .skills .skills .barra-skills span {
+    font-size: 12px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    top: -15px;
+    right: -12px;
+  }
+
+  footer .redes a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    margin: 8px;
+  }
+}
+
+/* Móviles pequeños (pantallas menores a 480px) */
+@media screen and (max-width: 480px) {
+  .container-header header .logo a {
+    font-size: 28px;
+  }
+
+  .skills h2 {
+    font-size: 28px;
+  }
+
+  .skills .fila .col h3 {
+    font-size: 20px;
+  }
+
+  .skills .skills .barra-skills span {
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    top: -13px;
+    right: -10px;
+  }
+}
+
