@@ -1,3 +1,4 @@
+/* Importar fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 
 /* Reset y fuentes */
@@ -8,19 +9,18 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
-  background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-  url(../img/fondo.jpg);
+  background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(../img/fondo.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* Header fijo */
@@ -49,16 +49,16 @@ html {
   text-decoration: none;
 }
 
-
+/* Menú principal */
 .nav ul {
   display: flex;
   list-style: none;
+  gap: 20px;
 }
 
 .nav ul li a {
   color: #fff;
   text-decoration: none;
-  margin: 0 15px;
   padding: 5px;
   transition: 0.3s;
 }
@@ -66,14 +66,19 @@ html {
 .nav ul li a:hover {
   color: #1cb698;
 }
-.nav-responsive{
-  background: #1cb698;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: none;
 
+/* Ícono hamburguesa con checkbox */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1cb698;
+  margin-left: auto; 
+  border-radius: 20px;
 }
 
 /* Sección Inicio */
@@ -114,6 +119,7 @@ html {
   font-weight: normal;
 }
 
+/* Redes sociales */
 .redes {
   display: flex;
   justify-content: center;
@@ -173,28 +179,31 @@ footer .redes a:hover {
   transform: scale(1.1);
 }
 
+/* Responsive con checkbox */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
 
-@media screen and (max-width: 980px) {
-  /* ocultar nav normal */
-  nav {
+  .nav ul {
     display: none;
-  }
-
-  /* mostrar botón hamburguesa */
-  .nav-responsive {
-    display: block;
-  }
-
-  /* cuando nav tenga la clase .responsive (al dar clic en el botón) */
-  nav.responsive {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 75px;
+    flex-direction: column;
     background-color: #252a2e;
-    width: 180px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px; 
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3); /* sombra hacia la izquierda */
+    border-radius: 0 0 0 10px; 
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav ul {
+    display: flex;
+   align-items:center;
   }
 }
-nav.responsive ul{
-  display: block !important;
+#menu-toggle {
+  display: none; /* oculta el checkbox */
 }
+

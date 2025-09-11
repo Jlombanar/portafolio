@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Portafolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Menu de header -->
-   <div class="container-header">
+  <!-- Header -->
+  <div class="container-header">
     <header>
-    <div class="logo">
-        <a href="#"> JALMPA</a>
-    </div>
- 
+      <div class="logo">
+        <a href="#">JALMPA</a>
+      </div>
 
-    <nav class="nav">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="./sobremi.html">Sobre Mi </a></li>
-            <li><a href="./skill.html">Skills</a></li>
-            <li><a href="./curriculum.html">Curriculum</a></li>
-            <li><a href="./portafolio.html">Portafolio</a></li>
-            <li><a href="./contactenos.html">Contacto </a></li>
-        </ul>
-    </nav>
-    <di class="nav-responsive">
+      <!-- Menú responsive con checkbox -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
         <i class="fa-solid fa-bars"></i>
+      </label>
 
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="./sobremi.html">Sobre Mi</a></li>
+          <li><a href="./skill.html">Skills</a></li>
+          <li><a href="./curriculum.html">Curriculum</a></li>
+          <li><a href="./portafolio.html">Portafolio</a></li>
+          <li><a href="./contactenos.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="inicio">
+    <div class="container-banner">
+      <div class="container-img">
+        <img src="./img/hero.png" alt="Foto de perfil" />
+      </div>
+      <h1>Jimmy Alexander Lombana Rivera</h1>
+      <h2>Ing. Sistemas - Experto en Programación</h2>
+      <div class="redes">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
     </div>
-   </header>
-   </div>
-     <!-- Section Inicio  -->
-      <section id="inicio" class="inicio">
-        <div class="container-banner">
-            <div class="container-img">
-                <img src="./img/hero.png" alt="">
-            </div>
-            <h1>Jimmy Alexander Lombana Rivera</h1>
-            <h2>Ing  Sistemas - Experto Programacion </h2>
-            <div class="redes">
-                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+  </section>
 
-            </div>
-        </div>
-      </section>
-    <footer>
-        <div class="redes">
-               <a href="#"> <i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
- 
+  <!-- Footer -->
+  <footer>
+    <div class="redes">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </footer>
 
-        </div>
-    </footer>
+  <!-- Scripts -->
+  <script src="./js/scrib.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
-<script src="./js/scrib.js"></script>
 </html>
