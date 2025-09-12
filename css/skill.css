@@ -276,7 +276,7 @@ footer .redes a:hover {
   }
 }
 
-/* === Responsive Menú Hamburguesa tipo Dropdown === */
+/* Responsive Menú  navar */
 @media (max-width: 768px) {
   #menu-toggle {
     display: none;
